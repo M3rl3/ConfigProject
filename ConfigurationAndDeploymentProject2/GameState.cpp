@@ -76,15 +76,15 @@ void GameState::LoadState(char arr[][3]) {
 		}
 	}
 	{
-		arr[0][0] = (char)values[0];
-		arr[0][1] = (char)values[1];
-		arr[0][2] = (char)values[2];
-		arr[1][0] = (char)values[3];
-		arr[1][1] = (char)values[4];
-		arr[1][2] = (char)values[5];
-		arr[2][0] = (char)values[6];
-		arr[2][1] = (char)values[7];
-		arr[2][2] = (char)values[8];
+		arr[0][0] = reinterpret_cast<char>(values[0]);
+		arr[0][1] = reinterpret_cast<char>(values[1]);
+		arr[0][2] = reinterpret_cast<char>(values[2]);
+		arr[1][0] = reinterpret_cast<char>(values[3]);
+		arr[1][1] = reinterpret_cast<char>(values[4]);
+		arr[1][2] = reinterpret_cast<char>(values[5]);
+		arr[2][0] = reinterpret_cast<char>(values[6]);
+		arr[2][1] = reinterpret_cast<char>(values[7]);
+		arr[2][2] = reinterpret_cast<char>(values[8]);
 		
 		/*
 		arr[0][0] = (char)array[0];

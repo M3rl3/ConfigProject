@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <gamestate>
 	<array location="arr[0][0]">
-		<value>1</value>
+		<value>X</value>
 	</array>
 	<array location="arr[0][1]">
 		<value>2</value>
