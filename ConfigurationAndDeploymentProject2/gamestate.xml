@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<gamestate>
+	<array location="arr[0][0]">
+		<value>1</value>
+	</array>
+	<array location="arr[0][1]">
+		<value>2</value>
+	</array>
+	<array location="arr[0][2]">
+		<value>3</value>
+	</array>
+	<array location="arr[1][0]">
+		<value>4</value>
+	</array>
+	<array location="arr[1][1]">
+		<value>5</value>
+	</array>
+	<array location="arr[1][2]">
+		<value>6</value>
+	</array>
+	<array location="arr[2][0]">
+		<value>7</value>
+	</array>
+	<array location="arr[2][1]">
+		<value>8</value>
+	</array>
+	<array location="arr[2][2]">
+		<value>9</value>
+	</array>
+</gamestate>

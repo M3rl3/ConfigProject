@@ -15,6 +15,7 @@ void Game::printArray() {
     std::cout << "\t20   |21   |22   \n";
     std::cout << "\t  " << arr[2][0] << "  |  " << arr[2][1] << "  |  " << arr[2][2] << " \n";
     std::cout << "\t     |     |     \n";
+    
 }
 
 void Game::handleTurns() {
@@ -27,9 +28,18 @@ void Game::handleTurns() {
     
     std::cin >> row >> column;
 
-    //Saves state if move is invalid
-    if (row > 2 || column > 2) {
-        std::cout << "\nSaving game state!";
+    //Saves state if move is 33
+    if (row == 3 && column == 3) {
+        std::cout << "\nSaving game state.";
+        gameState.SaveState(arr);
+        printArray();
+    }
+    
+    //Loads previous state if move is 44
+    else if (row == 4 && column == 4) {
+        std::cout << "\nLoading saved game state.";
+        gameState.LoadState(arr);
+        printArray();
         return;
     }
 
@@ -45,7 +55,7 @@ void Game::handleTurns() {
     }
     else {
         //if input position is already filled
-        std::cout << "Position already filled, select another!\n\n";
+        std::cout << "Position already filled, select another.\n\n";
         return;
     }
     printArray();
@@ -84,6 +94,11 @@ int main(int argc, char** argv) {
     std::cout << "\tTic-Tac-Toe\n";
     Game game;
     game.printArray();
+    std::cout << "\n\t33 - Save Game";
+    std::cout << "\n\t44 - Load Game" << std::endl;
+    std::cout << "\nThe Xs and Os are assigned according \nto the row and column number passed in." << std::endl;
+    
+
     game.turn = 'X';
     
     while (game.gameOver()) {
