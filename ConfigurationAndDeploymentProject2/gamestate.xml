@@ -4,16 +4,16 @@
 		<value>X</value>
 	</array>
 	<array location="arr[0][1]">
-		<value>2</value>
+		<value>O</value>
 	</array>
 	<array location="arr[0][2]">
 		<value>3</value>
 	</array>
 	<array location="arr[1][0]">
-		<value>4</value>
+		<value>X</value>
 	</array>
 	<array location="arr[1][1]">
-		<value>5</value>
+		<value>O</value>
 	</array>
 	<array location="arr[1][2]">
 		<value>6</value>
@@ -22,9 +22,9 @@
 		<value>7</value>
 	</array>
 	<array location="arr[2][1]">
-		<value>8</value>
+		<value>X</value>
 	</array>
 	<array location="arr[2][2]">
-		<value>9</value>
+		<value>O</value>
 	</array>
 </gamestate>

@@ -15,7 +15,7 @@ void Game::printArray() {
     std::cout << "\t20   |21   |22   \n";
     std::cout << "\t  " << arr[2][0] << "  |  " << arr[2][1] << "  |  " << arr[2][2] << " \n";
     std::cout << "\t     |     |     \n";
-    
+
 }
 
 void Game::handleTurns() {
@@ -30,17 +30,19 @@ void Game::handleTurns() {
 
     //Saves state if move is 33
     if (row == 3 && column == 3) {
-        std::cout << "\nSaving game state.";
         gameState.SaveState(arr);
         printArray();
     }
     
     //Loads previous state if move is 44
     else if (row == 4 && column == 4) {
-        std::cout << "\nLoading saved game state.";
         gameState.LoadState(arr);
         printArray();
         return;
+    }
+    
+    else if (row == 5 && column == 5) {
+        exit(0);
     }
 
     if (turn == 'X' && arr[row][column] != 'X' && arr[row][column] != 'O') {
@@ -95,9 +97,10 @@ int main(int argc, char** argv) {
     Game game;
     game.printArray();
     std::cout << "\n\t33 - Save Game";
-    std::cout << "\n\t44 - Load Game" << std::endl;
-    std::cout << "\nThe Xs and Os are assigned according \nto the row and column number passed in." << std::endl;
-    
+    std::cout << "\n\t44 - Load Game";
+    std::cout << "\n\t55 - Quit Game" << std::endl;
+    std::cout << "\nThe Xs and Os are assigned according to \nthe row and column information passed in." << std::endl;
+    std::cout << "\nFormat: row <space> column" << std::endl;
 
     game.turn = 'X';
     
