@@ -5,6 +5,7 @@
 #include "Game.h"
 
 void Game::printArray() {
+
     std::cout << "\n";
     std::cout << "\t00   |01   |02   \n";
     std::cout << "\t  " << arr[0][0] << "  |  " << arr[0][1] << "  |  " << arr[0][2] << " \n";
@@ -15,7 +16,6 @@ void Game::printArray() {
     std::cout << "\t20   |21   |22   \n";
     std::cout << "\t  " << arr[2][0] << "  |  " << arr[2][1] << "  |  " << arr[2][2] << " \n";
     std::cout << "\t     |     |     \n";
-
 }
 
 void Game::handleTurns() {
@@ -32,6 +32,7 @@ void Game::handleTurns() {
     if (row == 3 && column == 3) {
         gameState.SaveState(arr);
         printArray();
+        return;
     }
     
     //Loads previous state if move is 44
@@ -41,6 +42,7 @@ void Game::handleTurns() {
         return;
     }
     
+    //Exits game if move is 55
     else if (row == 5 && column == 5) {
         exit(0);
     }
@@ -89,24 +91,4 @@ bool Game::gameOver() {
     }         
 
     return false;
-}
-
-int main(int argc, char** argv) {
-    
-    std::cout << "\tTic-Tac-Toe\n";
-    Game game;
-    game.printArray();
-    std::cout << "\n\t33 - Save Game";
-    std::cout << "\n\t44 - Load Game";
-    std::cout << "\n\t55 - Quit Game" << std::endl;
-    std::cout << "\nThe Xs and Os are assigned according to \nthe row and column information passed in." << std::endl;
-    std::cout << "\nFormat: row <space> column" << std::endl;
-
-    game.turn = 'X';
-    
-    while (game.gameOver()) {
-        game.handleTurns();
-    }
-
-    return 0;
 }
