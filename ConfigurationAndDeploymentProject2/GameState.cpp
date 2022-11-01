@@ -77,5 +77,5 @@ void GameState::LoadState(char arr[][3]) {
 		}
 		index++;
 	}
-	std::cout << "Load Successful.";
+	std::cout << "Load Successful." << std::endl;
 }
