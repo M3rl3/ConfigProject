@@ -20,10 +20,10 @@ void Game::printArray() {
 
 void Game::handleTurns() {
     if (turn == 'X') {
-        std::cout << "\n[X]'s turn : ";
+        std::cout << "\n[X]: ";
     }
     else if (turn == 'O') {
-        std::cout << "\n[O]'s turn : ";
+        std::cout << "\n[O]: ";
     }
     
     std::cin >> row >> column;
@@ -42,8 +42,13 @@ void Game::handleTurns() {
         return;
     }
     
-    //Exits game if move is 55
+    //Change game language if move is 55
     else if (row == 5 && column == 5) {
+        gameState.GameLocale();
+    }
+    
+    //Exits game if move is 66
+    else if (row == 6 && column == 6) {
         exit(0);
     }
 
@@ -59,7 +64,7 @@ void Game::handleTurns() {
     }
     else {
         //if input position is already filled
-        std::cout << "Position already filled, select another.\n\n";
+        printArray();
         return;
     }
     printArray();
@@ -69,7 +74,8 @@ bool Game::gameOver() {
     //condition for simple rows and columns
     for (int i = 0; i < 3; i++) {
         if (arr[i][0] == arr[i][1] && arr[i][0] == arr[i][2] || arr[0][i] == arr[1][i] && arr[0][i] == arr[2][i]) {
-            std::cout << "\nYou Win!";           
+            std::cout << "\nYou Win!";
+            std::cout << "\nVous gagnez!";
             return false;
         }      
     }
@@ -77,7 +83,7 @@ bool Game::gameOver() {
     //condition for diagonals
     if (arr[0][0] == arr[1][1] && arr[0][0] == arr[2][2] || arr[0][2] == arr[1][1] && arr[0][2] == arr[2][0]) {
         std::cout << "\nYou Win!";
-
+        std::cout << "\nVous gagnez!";
         return false;
     }
         

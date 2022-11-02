@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<locale>
+  <language value0 ="english">
+    <text0>Tic-Tac-Toe: The Game </text0>
+    <text1>33 - Save Game </text1>
+    <text2>44 - Load Game </text2>
+    <text3>55 - Change Language </text3>
+    <text4>66 - Quit Game </text4>
+    <text5> 
+      The Xs and Os are assigned according to the row and column information passed in. 
+    </text5>
+    <text6>Format : row "space" column</text6>
+  </language>
+  <language value1 ="french">
+    <text0>Tic-Tac-Toe: le Jeu</text0>
+    <text1>33 - Sauvegarder le Jeu</text1>
+    <text2>44 - Chargement du Jeu</text2>
+    <text3>55 - Changer la Langue</text3>
+    <text4>66 - Quitter le Jeu</text4>
+    <text5>
+      Les X et les O sont attribues en fonction des informations de ligne et de colonne transmises.
+    </text5>
+    <text6>Format : ligne "espace" colonne</text6>
+  </language>
+</locale>
+  

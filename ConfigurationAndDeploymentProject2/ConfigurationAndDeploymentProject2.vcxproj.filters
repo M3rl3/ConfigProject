@@ -40,5 +40,8 @@
     <Xml Include="gamestate.xml">
       <Filter>xml Files</Filter>
     </Xml>
+    <Xml Include="locale.xml">
+      <Filter>xml Files</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

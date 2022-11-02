@@ -7,6 +7,7 @@ class Game {
 
 	bool draw = false;
 	int row, column;
+
 	GameState gameState;
 	
 public:	
