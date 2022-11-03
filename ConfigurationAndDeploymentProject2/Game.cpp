@@ -82,8 +82,8 @@ bool Game::gameOver() {
     
     //condition for diagonals
     if (arr[0][0] == arr[1][1] && arr[0][0] == arr[2][2] || arr[0][2] == arr[1][1] && arr[0][2] == arr[2][0]) {
-        std::cout << "\nYou Win!";
-        std::cout << "\nVous gagnez!";
+        std::cout << "\nYou win!";
+        std::cout << "\nVous gagnez!\n";
         return false;
     }
         
